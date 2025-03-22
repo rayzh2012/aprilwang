@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & 工业设计作品集</title>
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 加载动画 -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">Portfolio</a>
+            <div class="nav-links">
+                <a href="#portfolio" class="active">作品集</a>
+                <a href="#about">关于我</a>
+                <a href="#contact">联系</a>
+            </div>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 首页 Hero 部分 -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">AI & 工业设计</h1>
+            <p class="hero-subtitle">探索设计与技术的无限可能</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">查看作品</a>
+                <a href="#contact" class="btn btn-outline">联系我</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>向下滚动</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- 作品集部分 -->
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-section">
+            <h2>作品集</h2>
+            <div class="portfolio-filter">
+                <button class="active" data-filter="all">全部</button>
+                <button data-filter="ai">AI 设计</button>
+                <button data-filter="industrial">工业设计</button>
+            </div>
+            <div class="portfolio-grid"></div>
+        </div>
+    </section>
+
+    <!-- 关于我部分 -->
+    <section id="about" class="about">
+        <div class="about-section">
+            <h2>关于我</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>我是一名专注于 AI 设计和工业设计的创意设计师，致力于将技术与艺术完美结合。通过 AI 技术探索设计的无限可能，同时注重产品的实用性和用户体验。</p>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <span class="skill-name">AI 设计</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">工业设计</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">3D 建模</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系部分 -->
+    <section id="contact" class="contact">
+        <div class="contact-section">
+            <h2>联系我</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>contact@example.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+86 123 4567 8900</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>中国 上海</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="您的姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="您的邮箱" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="您的留言" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">发送消息</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Portfolio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-weixin"></i></a>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+                <a href="#"><i class="fab fa-behance"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 作品集模态框 -->
+    <div class="portfolio-modal">
+        <div class="modal-content">
+            <button class="close-modal">
+                <span class="material-icons">close</span>
+            </button>
+            <div class="modal-image">
+                <img src="" alt="">
+            </div>
+            <div class="modal-info">
+                <h3></h3>
+                <span class="category"></span>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 粒子动画容器 -->
+    <div class="particle-container">
+        <canvas></canvas>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
